@@ -1,0 +1,79 @@
+:root {
+  --left-nav-width: 300px;
+  --player-color:#282828;
+  --left-nav-color:#000;
+  --songs-displayer-color:#141922;
+}
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*Momentaneo*/
+body>*,
+.main-container>* {
+  min-width: 300px;
+  min-height: 100px;
+}
+/*----------*/
+
+/*--------------GENERAL--------------*/
+body {
+  height: 100vh;
+  flex-direction: column;
+  overflow:hidden;
+}
+
+.flex {
+  display:flex;
+}
+
+.f-grow {
+  flex-grow: 1;
+}
+.f-shrink {
+  flex-shrink:1;
+}
+
+/*--------------LEFT--------------*/
+.left {
+  background-color: var(--left-nav-color);
+  width:300px;
+}
+
+.container {
+  overflow: auto;
+  position: relative;
+  padding-top:100px;
+  background-color: var(--songs-displayer-color);
+}
+
+.top {
+  position: fixed;
+  width:calc(100% - var(--left-nav-width));
+  top:0;
+  overflow: hidden;
+  z-index: 1;
+  padding:20px;
+  background-color: hwb(0 0% 100% / 0.548);
+  justify-content:end;
+  align-items: center;
+}
+
+.upgrade-btn {
+  background-color: #080b12;
+  border: 1px solid white;
+  padding:15px 30px;
+  border-radius: 25px;
+  color:white;
+}
+
+
+/*--------------RIGHT--------------*/
+
+/*--------------FOOTER--------------*/
+.footer {
+  background-color: var(--player-color);
+}
