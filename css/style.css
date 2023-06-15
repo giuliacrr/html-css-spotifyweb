@@ -3,6 +3,7 @@
   --player-color:#282828;
   --left-nav-color:#000;
   --songs-displayer-color:#141922;
+  --non-hover-txt-color:#898989;
 }
 
 * {
@@ -11,13 +12,6 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
-/*Momentaneo*/
-body>*,
-.main-container>* {
-  min-width: 300px;
-  min-height: 100px;
-}
-/*----------*/
 
 /*--------------GENERAL--------------*/
 body {
@@ -40,9 +34,90 @@ body {
 /*--------------LEFT--------------*/
 .left {
   background-color: var(--left-nav-color);
-  width:300px;
+  min-width: var(--left-nav-width);
+  max-width: var(--left-nav-width);
 }
 
+.logo {
+  margin-top:20px;
+  height:60px;
+  width:100%;
+}
+.margin-menu-left {
+  margin-left:20px;
+}
+
+.logo img {
+  height:60px;
+}
+
+.page-menu {
+  margin-top:30px;
+}
+
+.page-btn {
+  list-style: none;
+}
+
+.page-btn li {
+  margin-top:10px;
+}
+
+.svg-size {
+  height:2.2rem;
+}
+
+.currentColor {
+  color:var(--non-hover-txt-color);
+}
+
+.page a {
+  color:currentColor;
+  align-items: center;
+  gap:10px;
+  text-decoration: none;
+}
+
+.name-page {
+  font-size: 1.1rem;
+  color:var(--non-hover-txt-color);
+}
+
+.page:hover .currentColor {
+  color:white;
+}
+.page:hover .name-page {
+  color:white;
+}
+
+/*Create a playlist*/
+.add-btn {
+  height:50px;
+  width:50px;
+  background-color: var(--non-hover-txt-color);
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  margin-right:10px;
+  margin-bottom:40px;
+}
+
+.margin-bottom-playlists {
+  margin-bottom: 30px;
+}
+
+.create {
+  font-weight:bold;
+  color: var(--non-hover-txt-color);
+  align-self: center;
+}
+
+
+
+
+
+
+/*--------------RIGHT--------------*/
 .container {
   overflow: auto;
   position: relative;
@@ -70,10 +145,9 @@ body {
   color:white;
 }
 
-
-/*--------------RIGHT--------------*/
-
 /*--------------FOOTER--------------*/
 .footer {
   background-color: var(--player-color);
+  min-height: 100px;
+  min-width:100px;
 }

@@ -10,16 +10,70 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-  <title>Document</title>
+  <title>Spotify</title>
 </head>
 
 <body class="flex">
   <!--Container-->
   <div class="main-container f-grow flex">
     <!--Left nav-->
-    <div class="left flex f-grow">
+    <div class="left">
       <!--Title-->
-      <div><img src="img/logo.svg" alt=""></div>
+      <div class="logo margin-menu-left"><img src="img/logo.svg" alt="logo"></div>
+      <!--Home, search, your library-->
+      <div class="page-menu margin-menu-left">
+        <ul class="page-btn">
+          <!--Home-->
+          <li class="page currentColor">
+            <a class="flex" href="x">
+              <svg class="currentColor svg-size" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z"
+                  fill="currentColor" />
+              </svg>
+              <div class="name-page">Home</div>
+            </a>
+          </li>
+          <!--Search-->
+          <li class="page currentColor">
+            <a class="flex" href="x">
+              <svg class="currentColor svg-size" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z"
+                  fill="currentColor" />
+              </svg>
+              <div class="name-page">Search</div>
+            </a>
+          </li>
+          <!--Your library-->
+          <li class="page">
+            <a class="flex" href="x">
+              <svg class="currentColor svg-size" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z"
+                  fill="currentColor" />
+              </svg>
+              <div class="name-page">Your library</div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!--Playlists-->
+      <div class="playlists">
+        <h3>PLAYLIST</h3>
+        <div class="create-a-pl margin-menu-left">
+          <div class="flex create-pl">
+            <div class="add-btn flex "><i class="fa-solid fa-plus"></i></div>
+            <div class="create">Create Playlist</div>
+          </div>
+          <div class="create margin-bottom-playlists">Playlist name</div>
+          <div class="create margin-bottom-playlists">Playlist name</div>
+          <div class="create margin-bottom-playlists">Playlist name</div>
+          <div class="create margin-bottom-playlists">Playlist name</div>
+          <div class="create margin-bottom-playlists">Playlist name</div>
+          <div class="create margin-bottom-playlists">Playlist name</div>
+        </div>
+      </div>
     </div>
     <!--Right-->
     <div class="right f-grow flex">
@@ -27,7 +81,7 @@
       <div class="container">
         <!--Top "Upgrade"-->
         <div class="top flex">
-          <button class="upgrade-btn" type="button">EFFETTUA L'UPGRADE</button>
+          <button class="upgrade-btn" type="button">UPGRADE SUBSCRIPTION</button>
         </div>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum itaque, blanditiis, totam exercitationem iste
