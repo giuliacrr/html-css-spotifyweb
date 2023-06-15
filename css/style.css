@@ -1,5 +1,6 @@
 :root {
   --left-nav-width: 300px;
+  --player-height:100px;
   --player-color:#282828;
   --left-nav-color:#000;
   --songs-displayer-color:#141922;
@@ -12,12 +13,23 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
+/*NON POSSO LEVARLO O LEFT E RIGHT CRESCONO IN ALTEZZA A DISMISURA 
+SPOSTANDO IN BASSO IL FOOTER*/
+/*body>*,
+.main-container>* {
+  min-width: 100px;
+  min-height: 100px;
+}*/
+/*AGGIUNGERE LA MIN HEIGHT ALLE COSE AIUTA A NON ROMPERLO*/
 
 /*--------------GENERAL--------------*/
 body {
   height: 100vh;
   flex-direction: column;
-  overflow:hidden;
+}
+
+.main-container {
+  min-height: 100px;
 }
 
 .flex {
@@ -27,6 +39,7 @@ body {
 .f-grow {
   flex-grow: 1;
 }
+
 .f-shrink {
   flex-shrink:1;
 }
@@ -75,7 +88,7 @@ body {
   color:currentColor;
   align-items: center;
   gap:10px;
-  text-decoration: none;
+  text-decoration:none;
 }
 
 .name-page {
@@ -99,7 +112,6 @@ body {
   align-items: center;
   font-size: 1.5rem;
   margin-right:10px;
-  margin-bottom:40px;
 }
 
 .margin-bottom-playlists {
@@ -109,13 +121,75 @@ body {
 .create {
   font-weight:bold;
   color: var(--non-hover-txt-color);
-  align-self: center;
 }
 
+.create:hover {
+  color:white;
+  cursor: pointer;
+}
 
+.create-pl {
+  align-items: center;
+  margin-bottom:40px;
+}
 
+.create-pl:hover .add-btn {
+  background-color: white;
+  cursor: pointer;
+}
 
+.create-pl:hover .create {
+  color:white;
+  cursor: pointer;
+}
 
+/*PROFILE*/
+.profile {
+  margin-top:198px;
+}
+
+.profile div {
+  color:white;
+  font-weight: bold;
+  margin-right:10px;
+}
+
+.install {
+  margin-bottom:11px;
+}
+
+.install div {
+  color:var(--non-hover-txt-color);
+}
+
+.install:hover div {
+  cursor: pointer;
+  color:white;
+}
+
+.prof-name {
+  align-items: center;
+  padding-top:10px;
+  border-top: 2px solid var(--non-hover-txt-color);
+}
+
+.prof-name div {
+  font-size: 1.3rem;
+}
+
+.prof-img {
+  background-color: var(--non-hover-txt-color);
+  height:25px;
+  width:25px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  margin-right:10px;
+}
+
+.prof-img-size {
+  height:20px;
+}
 
 /*--------------RIGHT--------------*/
 .container {
@@ -145,9 +219,38 @@ body {
   color:white;
 }
 
+.upgrade-btn:hover {
+  cursor: pointer;
+  background-color: var(--songs-displayer-color);
+}
+.upgrade-btn:active {
+  padding:12px 27px;
+  margin:3px 3px;
+  font-size: 0.8rem;
+}
+
+/*Categories*/
+.categories {
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:25px;
+  color:var(--non-hover-txt-color);
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.cat {
+  padding:10px;
+}
+.cat:focus {
+  color:white;
+  border-bottom: 2px solid green;
+  cursor: pointer;
+}
+
 /*--------------FOOTER--------------*/
 .footer {
   background-color: var(--player-color);
+  min-width: 100px;
   min-height: 100px;
-  min-width:100px;
 }
