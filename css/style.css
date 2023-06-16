@@ -1,6 +1,8 @@
 :root {
   --left-nav-width: 250px;
+  --left-nav-width-small: 60px;
   --player-height:100px;
+  --gap-var:20px;
   --player-color:#282828;
   --left-nav-color:#000;
   --songs-displayer-color:#141922;
@@ -76,6 +78,10 @@ body {
   width:100%;
 }
 
+.small-res-logo {
+  display:none;
+}
+
 .left-padding {
   padding-left: 20px;
   padding-right:20px;
@@ -88,7 +94,6 @@ body {
 
 .page-menu {
   margin-top:30px;
-  max-width:
 }
 
 .page-btn {
@@ -228,8 +233,8 @@ body {
 
 .prof-img {
   background-color: var(--non-hover-txt-color);
-  height:25px;
-  width:25px;
+  min-height:27px;
+  min-width:27px;
   border-radius: 50%;
   justify-content: center;
   align-items: center;
@@ -238,6 +243,8 @@ body {
 
 .prof-img-size {
   height:20px;
+  width:20px;
+
 }
 
 /*--------------RIGHT--------------*/
@@ -295,6 +302,51 @@ body {
   color:white;
   border-bottom: 2px solid green;
   cursor: pointer;
+}
+
+/*Songs*/
+.lateral-margin {
+  margin:0px 20px;
+}
+
+.song-container-margin {
+  margin-top:50px;
+  width:100%;
+}
+
+.recently-played {
+  width:100%;
+  flex-wrap: wrap;
+  gap:var(--gap-var);
+}
+
+.section-title {
+  margin-bottom:20px;
+  font-size: 1.8rem;
+  color:white;
+}
+
+.song-display {
+  width: calc((100% / 6) - var(--gap-var));
+  color:white;
+  text-align: center;
+  display: inline-block;
+}
+
+.song-name {
+  font-size: initial;
+  margin-top:16px;
+  margin-bottom: 8px;
+}
+
+.artist {
+  font-size: small;
+  font-weight: bold;
+  color:var(--non-hover-txt-color)
+}
+
+.img-width {
+  width:100%;
 }
 
 /*--------------FOOTER--------------*/

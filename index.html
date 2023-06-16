@@ -20,53 +20,56 @@
 
     <div class="left flex">
       <!--Title-->
-      <div class="logo margin-menu-left flex column f-no-grow"><img src="img/logo.svg" alt="logo"></div>
+      <div class="logo margin-menu-left flex column f-no-grow">
+        <img class="hide big-res-logo" src="img/logo.svg" alt="logo">
+        <img class="small-res-logo" src="img/logo-small.svg" alt="logo">
+      </div>
       <!--Home, search, your library-->
       <div class="page-menu flex column f-no-grow">
         <ul class="page-btn">
           <!--Home-->
           <li class="page currentColor">
-            <div tabindex="0" class="anchor left-padding flex" href="">
+            <div tabindex="0" class="anchor left-padding flex">
               <svg class="currentColor svg-size" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z"
                   fill="currentColor" />
               </svg>
-              <div class="name-page">Home</div>
+              <div class="hide name-page">Home</div>
             </div>
           </li>
           <!--Search-->
           <li class="page currentColor">
-            <div tabindex="0" class="anchor left-padding flex" href="">
+            <div tabindex="0" class="anchor left-padding flex">
               <svg class="currentColor svg-size" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z"
                   fill="currentColor" />
               </svg>
-              <div class="name-page">Search</div>
+              <div class="hide name-page">Search</div>
             </div>
           </li>
           <!--Your library-->
           <li class="page">
-            <div tabindex="0" class="anchor left-padding flex" href="">
+            <div tabindex="0" class="anchor left-padding flex">
               <svg class="currentColor svg-size" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z"
                   fill="currentColor" />
               </svg>
-              <div class="name-page">Your library</div>
+              <div class="hide name-page">Your library</div>
             </div>
           </li>
         </ul>
       </div>
       <!--create a playlist-->
-      <h3 class="playlist-title left-padding">PLAYLIST</h3>
-      <div class="flex create-pl left-padding">
+      <h3 class="playlist-title hide left-padding">PLAYLIST</h3>
+      <div class="flex create-pl hide left-padding">
         <div class="add-btn flex "><i class="fa-solid fa-plus"></i></div>
         <div class="create">Create Playlist</div>
       </div>
       <!--Playlists-->
-      <div class="playlists f-grow of-auto">
+      <div class="playlists f-grow hide of-auto">
         <div class="create-a-pl flex">
           <!--created playlists-->
           <div class="play-list of-auto">
@@ -76,7 +79,6 @@
               <div tabindex="0" class="create margin-bottom-playlists left-padding">Playlist name</div>
               <div tabindex="0" class="create margin-bottom-playlists left-padding">Playlist name</div>
               <div tabindex="0" class="create margin-bottom-playlists left-padding">Playlist name</div>
-
               <div tabindex="0" class="create margin-bottom-playlists left-padding">Playlist name</div>
               <div tabindex="0" class="create margin-bottom-playlists left-padding">Playlist name</div>
               <div tabindex="0" class="create margin-bottom-playlists left-padding">Playlist name</div>
@@ -94,12 +96,14 @@
       <!--Profile-->
       <div class="profile left-padding flex column f-no-grow">
         <div class="install">
-          <div><i class="fa-regular fa-circle-down"></i> Installa app</div>
+          <div class="flex"><i class="fa-regular fa-circle-down"></i>
+            <div class="hide">Installa app</div>
+          </div>
         </div>
         <div>
           <div class=" prof-name flex">
             <div class="prof-img flex"><img class="prof-img-size" src="img/profile.svg" alt="profile"></div>
-            <div>John Doe</div>
+            <div class="hide">John Doe</div>
           </div>
         </div>
       </div>
@@ -113,7 +117,7 @@
           <button class="upgrade-btn" type="button">UPGRADE SUBSCRIPTION</button>
         </div>
         <!--songs-->
-        <div>
+        <div class="lateral-margin"><!--categories-->
           <div class="categories flex">
             <div tabindex="0" class="cat">IN EVIDENZA</div>
             <div tabindex="0" class="cat">PODCAST</div>
@@ -121,6 +125,55 @@
             <div tabindex="0" class="cat">GENERI E MOOD</div>
             <div tabindex="0" class="cat">NUOVE USCITE</div>
             <div tabindex="0" class="cat">SCOPRI</div>
+          </div>
+          <!--songs boxes-->
+          <div class="song-container-margin">
+            <!-- RECENTLY PLAYED-->
+            <section>
+              <h1 class="section-title">Recently played</h1>
+              <div class="flex recently-played">
+                <div class="song-display">
+                  <!--Vigiland-->
+                  <div><img class="img-width" src="img/vigiland.jpg" alt="vigiland"></div>
+                  <h4 class="song-name">Friday Night</h4>
+                  <span class="artist">Vigiland</span>
+                </div>
+                <!--Avicii-->
+                <div class="song-display">
+                  <div><img class="img-width" src="img/avicii.jpg" alt="avicii"></div>
+                  <h4 class="song-name">For A Better Day</h4>
+                  <span class="artist">Avicii</span>
+                </div>
+                <!--Jojo hosts-->
+                <div class="song-display">
+                  <div><img class="img-width" src="img/jojop3.jpg" alt="jojo part 3 hosts"></div>
+                  <h4 class="song-name">JOJO'S BIZARRE ADVENTURE - Stardust Crusaders O.S.T [Departure]</h4>
+                  <span class="artist">Yugo Kanno</span>
+                </div>
+                <!--Imagine Wagons-->
+                <div class="song-display">
+                  <div><img class="img-width" src="img/imagine_dragons.jpg" alt="I I A"></div>
+                  <h4 class="song-name">Boner</h4>
+                  <span class="artist">Imagine Wagons</span>
+                </div>
+                <!--c2c-->
+                <div class="song-display">
+                  <div><img class="img-width" src="img/c2c_tetra.jpg" alt="c2c tetra album"></div>
+                  <h4 class="song-name">Delta</h4>
+                  <span class="artist">C2C</span>
+                </div>
+                <!--Lana del Rey-->
+                <div class="song-display">
+                  <div><img class="img-width" src="img/young&beautiful.jpeg" alt=""></div>
+                  <h4 class="song-name">Young And Beautiful</h4>
+                  <span class="artist">Lana Del Rey</span>
+                </div>
+              </div>
+            </section>
+            <!--FOR YOU-->
+            <section class="for-you flex"></section>
+            <!--POPULAR ARTISTS-->
+            <section class="popular-artists flex "></section>
           </div>
         </div>
       </div>
