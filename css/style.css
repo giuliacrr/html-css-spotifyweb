@@ -314,6 +314,11 @@ body {
   width:100%;
 }
 
+.margin-container {
+  margin-top:40px;
+  margin-bottom:20px;
+}
+
 .recently-played {
   width:100%;
   flex-wrap: wrap;
@@ -349,11 +354,66 @@ body {
   width:100%;
 }
 
+/*FOR YOU*/
+
+.for-you {
+  margin-bottom:20px;
+}
+.for-you .section-title {
+  margin-bottom:5px;
+}
+/*Artist*/
+.circle-pic {
+  aspect-ratio: 1/1;
+  border-radius:50%;
+}
+
+
+
 /*--------------FOOTER--------------*/
 .footer {
   background-color: var(--player-color);
   min-width: 100px;
   min-height: 100px;
+  align-items: center;
+}
+
+/*PLAYER*/
+.bg-c {
+  background-color: var(--player-color);
+}
+
+.player-img {
+  width:60px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.song-title {
+  font-size:1rem;
+  font-weight: bold;
+  color:white;
+}
+
+.song-artist {
+  font-weight: bold;
+  color:var(--non-hover-txt-color);
+  font-size:0.8rem;
+}
+
+.img-name-artist {
+  justify-content: center;
+  align-items:center;
+  gap:30px;
+}
+
+.fa-heart:hover {
+  color:var(--spotify-green);
+  cursor: pointer;
+}
+
+.img-name-artist i {
+  color:var(--non-hover-txt-color);
 }
 
 

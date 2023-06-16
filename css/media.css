@@ -57,6 +57,11 @@
   
 }
 
+@media screen and (max-width:450px) {
+  .song-display {
+    width: 100%;
+  }
+}
 
 
 
