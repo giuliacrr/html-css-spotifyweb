@@ -202,7 +202,7 @@
                   <h4 class="song-name">Salvatore Ganacci</h4>
                 </div>
                 <!--Avicii-->
-                <div class="song-display">
+                <div class="song-display">play-lef
                   <div><img class="img-width circle-pic" src="img/deee_lite.jpg" alt="mix daily"></div>
                   <h4 class="song-name">Deee-Lite</h4>
                 </div>
@@ -216,31 +216,63 @@
   <!--Footer player-->
   <div class="footer flex">
     <div class="player-bar flex">
+
       <!--LEFT-->
-      <div class="left flex">
-        <div class="bg-c flex img-name-artist">
+      <div class="play-left flex">
+        <div class=" flex img-name-artist">
           <!--song-->
-          <div class="bg-c"><img class="img-width player-img" src="img/vigiland.jpg" alt="vigiland"></div>
+          <div class=""><img class="img-width player-img" src="img/vigiland.jpg" alt="vigiland"></div>
           <div>
-            <div class="song-title">Friday Night</div>
+            <div class="song-title color-fonts">Friday Night</div>
             <div class="song-artist">Vigiland</div>
           </div>
           <!--favorite-button-->
-          <div class="bg-c img-name-artist">
-            <div class="bg-c"><i class="fa-regular fa-heart"></i></div>
+          <div class=" img-name-artist">
+            <div><i class="fa-regular fa-heart"></i></div>
           </div>
         </div>
-        <!--MIDDLE-->
-        <div class="middle flex">
-          <!--player-->
-          <div class="flex">
+      </div>
 
+      <!--MIDDLE-->
+      <div class="play-middle flex">
+        <div class="player-buttons flex">
+          <!--Shuffle and back-->
+          <div class="flex align-items">
+            <div class="fonts distance-s"><i class="fa-solid fa-shuffle"></i></div>
+            <div class="fonts"><i class="fa-solid fa-backward-step"></i></div>
+            <!--play btn-->
+            <div class="fonts distance"><i class="fa-regular fa-circle-play"></i></div>
+            <!--forward and reproduce-->
+            <div class="fonts distance-s"><i class="fa-solid fa-forward-step"></i></div>
+            <div class="fonts"><i class="fa-solid fa-rotate-right"></i></div>
           </div>
         </div>
-        <!--RIGHT-->
-        <div class="right flex"></div>
+        <div class="padre-barra flex align-items jf-content">
+          <!--timer-->
+          <div class="color-fonts time">1:00</div>
+          <!--bar-->
+          <div class="bar">
+            <div class="in-bar"></div>
+          </div>
+          <!--total time-->
+          <div class="color-fonts time">-1:53</div>
+        </div>
+      </div>
+
+      <!--RIGHT-->
+      <div class="play-right flex">
+        <!--queue-->
+        <div><i class="fa-solid fa-list"></i></div>
+        <!--device-->
+        <div><i class="fa-solid fa-display"></i></div>
+        <!--volume-->
+        <div class="flex align-items">
+          <div><i class="fa-solid fa-volume-high"></i></div>
+          <div class="volume"></div>
+        </div>
       </div>
     </div>
+  </div>
 </body>
 
 </html>
