@@ -1,10 +1,11 @@
 :root {
-  --left-nav-width: 300px;
+  --left-nav-width: 250px;
   --player-height:100px;
   --player-color:#282828;
   --left-nav-color:#000;
   --songs-displayer-color:#141922;
   --non-hover-txt-color:#898989;
+  --spotify-green:#1fdf64;
 }
 
 * {
@@ -18,7 +19,7 @@ SPOSTANDO IN BASSO IL FOOTER*/
 /*body>*,
 .main-container>* {
   min-width: 100px;
-  min-height: 100px;
+  min-height: 100px;create
 }*/
 /*AGGIUNGERE LA MIN HEIGHT ALLE COSE AIUTA A NON ROMPERLO*/
 
@@ -36,12 +37,28 @@ body {
   display:flex;
 }
 
+.column {
+  flex-direction: column;
+}
+
 .f-grow {
   flex-grow: 1;
 }
 
+.f-no-grow {
+  flex-grow:0;
+}
+
 .f-shrink {
   flex-shrink:1;
+}
+
+.of-auto {
+  overflow: auto;
+}
+
+.of-hidden {
+  overflow: hidden;
 }
 
 /*--------------LEFT--------------*/
@@ -49,6 +66,8 @@ body {
   background-color: var(--left-nav-color);
   min-width: var(--left-nav-width);
   max-width: var(--left-nav-width);
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .logo {
@@ -56,9 +75,12 @@ body {
   height:60px;
   width:100%;
 }
-.margin-menu-left {
-  margin-left:20px;
+
+.left-padding {
+  padding-left: 20px;
+  padding-right:20px;
 }
+
 
 .logo img {
   height:60px;
@@ -66,6 +88,7 @@ body {
 
 .page-menu {
   margin-top:30px;
+  max-width:
 }
 
 .page-btn {
@@ -84,23 +107,31 @@ body {
   color:var(--non-hover-txt-color);
 }
 
-.page a {
+.page .anchor {
   color:currentColor;
   align-items: center;
   gap:10px;
   text-decoration:none;
+  border-left:2px solid transparent;
+}
+
+.anchor:focus {
+  border-color:var(--spotify-green);
+}
+
+.anchor:focus .currentColor,
+.anchor:focus .name-page {
+  color:white;
+}
+
+.anchor:hover .currentColor,
+.anchor:hover .name-page {
+  color:white;
 }
 
 .name-page {
   font-size: 1.1rem;
   color:var(--non-hover-txt-color);
-}
-
-.page:hover .currentColor {
-  color:white;
-}
-.page:hover .name-page {
-  color:white;
 }
 
 /*Create a playlist*/
@@ -121,11 +152,20 @@ body {
 .create {
   font-weight:bold;
   color: var(--non-hover-txt-color);
+  border-left:2px solid transparent;
+}
+
+.create-a-pl {
+  flex-direction: column;
 }
 
 .create:hover {
   color:white;
   cursor: pointer;
+}
+
+.create:focus {
+  border-color: var(--spotify-green);
 }
 
 .create-pl {
@@ -145,7 +185,7 @@ body {
 
 /*PROFILE*/
 .profile {
-  margin-top:198px;
+  margin-bottom:20px;
 }
 
 .profile div {
@@ -254,3 +294,8 @@ body {
   min-width: 100px;
   min-height: 100px;
 }
+
+
+
+
+
