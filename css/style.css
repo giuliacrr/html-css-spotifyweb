@@ -302,10 +302,15 @@ body {
 .cat {
   padding:10px;
 }
+
+.cat:hover {
+  color:white;
+  cursor: pointer;
+}
+
 .cat:focus {
   color:white;
   border-bottom: 2px solid green;
-  cursor: pointer;
 }
 
 /*Songs*/
