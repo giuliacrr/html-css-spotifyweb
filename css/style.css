@@ -67,6 +67,9 @@ body {
   overflow: hidden;
 }
 
+img:hover {
+  cursor: pointer;
+}
 /*--------------LEFT--------------*/
 .left {
   background-color: var(--left-nav-color);
@@ -484,7 +487,8 @@ body {
 
 .bar {
   height:3px;
-  min-width:500px;
+  width:100%;
+  max-width:500px;
   background-color:var(--non-hover-txt-color);
   margin:0px 20px;
 }
