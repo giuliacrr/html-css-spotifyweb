@@ -4,10 +4,24 @@
   }
 }
 
+@media screen and (max-width:1100px){
+  .img-name-artist {
+    gap:10px;
+  }
+}
+
 @media screen and (max-width:700px) {
   .song-display {
     width: calc((100% / 2) - var(--gap-var));
   }
+  .fonts {
+    font-size: 1.3rem;
+  }
+  .distance {
+    margin:0px 20px;
+    font-size:1.8rem;
+  }
+  
 }
 
 @media screen and (max-width:600px) {
@@ -54,7 +68,14 @@
   .install div {
     margin-left: 4px;
   }
-  
+  .play-right {
+    width:25%;
+    flex-wrap: wrap;
+    gap:10px;
+  }
+  .volume {
+    display:none;
+  }
 }
 
 @media screen and (max-width:450px) {

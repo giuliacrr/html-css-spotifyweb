@@ -73,6 +73,7 @@ img:hover {
 /*--------------LEFT--------------*/
 .left {
   background-color: var(--left-nav-color);
+  width:100%;
   min-width: var(--left-nav-width);
   max-width: var(--left-nav-width);
   flex-direction: column;
@@ -313,7 +314,7 @@ img:hover {
 
 .cat:focus {
   color:white;
-  border-bottom: 2px solid green;
+  border-bottom: 2px solid var(--spotify-green);
 }
 
 /*Songs*/
@@ -461,6 +462,7 @@ img:hover {
 .player-buttons {
   color:white;
   margin-bottom:10px;
+  justify-content: space-between;
 }
 
 .fonts {
@@ -477,7 +479,7 @@ img:hover {
 }
 
 .distance {
-  margin:0px 50px;
+  margin:0px 30px;
   font-size:2rem;
 }
 
@@ -508,12 +510,18 @@ font-size:0.8rem;
   color:white;
   align-items: center;
   justify-content:flex-end;
-  gap:20px;
+  gap:15px;
+}
+
+.volume-all {
+  width:100%;
+  max-width:25%;
 }
 
 .volume {
   height:3px;
-  min-width:90px;
+  width:100%;
+  max-width:90px;
   background-color: white;
   margin-left:10px;
 }
