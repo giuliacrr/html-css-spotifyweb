@@ -29,6 +29,7 @@ SPOSTANDO IN BASSO IL FOOTER*/
 body {
   height: 100vh;
   flex-direction: column;
+  overflow:hidden;
 }
 
 .main-container {
@@ -365,6 +366,26 @@ img:hover {
 
 .img-width {
   width:100%;
+}
+
+/*play button over songs*/
+.hover-song {
+  position: relative;
+}
+
+.hover-song:hover .fixed-play-btn{
+  display:block;
+}
+
+.fixed-play-btn {
+  background-color: rgba(0, 0, 0, 0.5);
+  color:var(--spotify-green);
+  border:none;
+  width:100%;
+  height:100%;
+  font-size: 3rem;
+  position: absolute;
+  display:none;
 }
 
 /*FOR YOU*/
